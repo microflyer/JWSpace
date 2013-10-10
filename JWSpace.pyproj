@@ -12,13 +12,18 @@
     <OutputPath>.</OutputPath>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
-    <InterpreterId>{8feaa026-1d47-4e80-af44-90d2f6ae5262}</InterpreterId>
+    <InterpreterId>{77fcda1b-a377-411e-9f8e-20e6f5653019}</InterpreterId>
     <InterpreterVersion>2.7</InterpreterVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
   <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
   <ItemGroup>
+    <Compile Include="app\models.py" />
     <Compile Include="config.py" />
+    <Compile Include="db_create.py" />
+    <Compile Include="db_downgrade.py" />
+    <Compile Include="db_migrate.py" />
+    <Compile Include="db_upgrade.py" />
     <Compile Include="run.py" />
     <Compile Include="virtualenv.py" />
     <Compile Include="app\forms.py" />
@@ -38,6 +43,16 @@
       <BaseInterpreter>{2af0f10d-7135-4994-9156-5d01c9c11b7e}</BaseInterpreter>
       <Version>2.7</Version>
       <Description>flask (Python 2.7)</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <LibraryPath>Lib\</LibraryPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+    </Interpreter>
+    <Interpreter Include="flask\">
+      <Id>{77fcda1b-a377-411e-9f8e-20e6f5653019}</Id>
+      <BaseInterpreter>{9a7a9026-48c1-4688-9d5d-e5699d47d074}</BaseInterpreter>
+      <Version>2.7</Version>
+      <Description>flask (Python 64-bit 2.7)</Description>
       <InterpreterPath>Scripts\python.exe</InterpreterPath>
       <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
       <LibraryPath>Lib\</LibraryPath>
